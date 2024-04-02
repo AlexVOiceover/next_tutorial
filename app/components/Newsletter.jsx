@@ -1,0 +1,15 @@
+import React from 'react'
+
+const Newsletter = () => {
+  return <section className='not-prose'>
+
+            <div className='rounded'>
+                <p className='text-base font-medium'>Subscribe</p>
+
+            </div>
+
+
+  </section>
+}
+
+export default Newsletter

@@ -1,0 +1,33 @@
+---
+title: Learn NextJS
+author: Alexander
+---
+
+# Markdown file
+
+<Newsletter />
+
+List of items
+
+- one
+- two
+- three
+
+```jsx
+export async function getPostBySlug(slug){
+    const realSlug = slug.replace(/\.mdx$/,'')
+    const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
+    const fileContent = fs.readFileSync(filePath, {encoding: 'utf8'})
+
+    const {content, frontmatter} = await compileMDX({
+        source: fileContent,
+        components: {Newsletter: Newsletter},
+        options: {
+            parseFrontmatter: true
+        }
+    })
+
+    return {content, frontmatter}
+}
+
+```
