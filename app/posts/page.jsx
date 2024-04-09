@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Page = () => {
-  return <div>About from page</div>
+  return <div>All blog posts</div>
 }
 
 export default Page
