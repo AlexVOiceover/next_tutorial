@@ -4,10 +4,9 @@ const Newsletter = () => {
   return <section className='not-prose'>
 
             <div className='rounded'>
-                <p className='text-base font-medium'>Subscribe</p>
+                <p className='text-base font-medium'>Subscribe to my Newsletter</p>
 
             </div>
-
 
   </section>
 }

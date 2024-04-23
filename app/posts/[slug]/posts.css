@@ -1,0 +1,4 @@
+/* Style for lines that are highlighted on the code snippets*/
+[data-highlighted-line] {
+  background-color: #33122c;
+}

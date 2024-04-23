@@ -3,7 +3,7 @@ title: Learn NextJS
 author: Alexander
 ---
 
-# Markdown file
+# Subtitle Markdown file
 
 <Newsletter />
 
@@ -13,21 +13,20 @@ List of items
 - two
 - three
 
-```jsx
-export async function getPostBySlug(slug){
-    const realSlug = slug.replace(/\.mdx$/,'')
-    const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
-    const fileContent = fs.readFileSync(filePath, {encoding: 'utf8'})
+```jsx {1,4}
+export async function getPostBySlug(slug) {
+  const realSlug = slug.replace(/\.mdx$/, '')
+  const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
+  const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
 
-    const {content, frontmatter} = await compileMDX({
-        source: fileContent,
-        components: {Newsletter: Newsletter},
-        options: {
-            parseFrontmatter: true
-        }
-    })
+  const { content, frontmatter } = await compileMDX({
+    source: fileContent,
+    components: { Newsletter: Newsletter },
+    options: {
+      parseFrontmatter: true
+    }
+  })
 
-    return {content, frontmatter}
+  return { content, frontmatter }
 }
-
 ```
